@@ -22,22 +22,251 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Home</title>
+  <title>Weather App by Nudo</title>
 </head>
 
 <body>
   {{>header}}
   <main>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="wrapper-title">
-            <h2>{{title}}</h2>
+    {{!-- section 01 --}}
+    <section class="section seaction-01">
+      <div class="hero-wrap">
+        <div class="home-slider owl-carousel">
+          <div class="slider-item" style="background-image:url(images/wea-01.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-12 ftco-animate">
+                  <div class="text w-100 text-center">
+                    <h2>Chao ban den voi weatherapp by Nudo </h2>
+                    <h1 class="mb-3">WeatherApp</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h4>{{username}}</h4>
+          <div class="slider-item" style="background-image:url(images/wea-02.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-12 ftco-animate">
+                  <div class="text w-100 text-center">
+                    <h2>Va day la du an dau tien voi nodejs cua Nudo</h2>
+                    <h1 class="mb-3">Nodejs Backend</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-item" style="background-image:url(images/wea-03.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-12 ftco-animate">
+                  <div class="text w-100 text-center">
+                    <h2>Nudo Hy vong se nhan duoc su gop y tu moi nguoi </h2>
+                    <h1 class="mb-3">Thank for watching</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    {{!-- section 02 --}}
+    <section class="ftco-section ftco-no-pb">
+      <div class="container">
+        <div class="row d-flex no-gutters">
+          <div class="col-md-6 d-flex">
+            <div
+              class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end"
+              style="background-image:url(images/me/12.jpeg);">
+            </div>
+          </div>
+          <div class="col-md-6 pl-md-5">
+            <div class="row justify-content-start py-5">
+              <div class="col-md-12 heading-section ftco-animate pl-md-4 py-md-4">
+                <span class="subheading">Welcome to Weatherapp</span>
+                <h2 class="mb-4">I create and turn into reality</h2>
+                <p>Hello! Minh la Nudo Tran. Minh dang xay dung project cua ban than voi Nodejs. Day la san pham minh
+                  tam huyet va se co gang hoan thien nhat.</p>
+                <div class="tabulation-2 mt-4">
+                  <ul class="nav nav-pills nav-fill d-md-flex d-block">
+                    <li class="nav-item mb-md-0 mb-2">
+                      <a class="nav-link active py-2" data-toggle="tab" href="#home1">About me</a>
+                    </li>
+                    <li class="nav-item px-lg-2 mb-md-0 mb-2">
+                      <a class="nav-link py-2" data-toggle="tab" href="#home2">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content bg-light rounded mt-2">
+                    <div class="tab-pane container p-0 active" id="home1">
+                      <p>Minh ten Tran Phuoc Loi, minh dang hoc tap tai Truong Dai Hoc Cong Nghe Thong Tin - DHQGTPHCM
+                        va la Frontend Developer o Wao Studio.</p>
+                    </div>
+                    <div class="tab-pane container p-0 fade" id="home2">
+                      <p>Minh khong phai nhan vat dac biet hay noi tieng nao do. Minh cung nhu cac developer khac van
+                        dang trao doi kien thuc ban than moi ngay va hoc cach truong thanh de tro thanh mot Fullstack
+                        Dev.
+                      </p>
+                    </div>
+                    <div class="tab-pane container p-0 fade" id="home3">
+                      <p>Contact me_</p>
+                      <p>Email: phuocloi2203@gmail.com</p>
+                      <p>Facebook: fb.com/nudo350</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{!-- section 03 --}}
+    <section class="ftco-counter" id="section-counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="2">0</strong>
+              </div>
+              <div class="text-2">
+                <span>Years of <br>Experienced</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="16">10</strong>
+              </div>
+              <div class="text-2">
+                <span>Project <br>Done</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="139">0</strong>
+              </div>
+              <div class="text-2">
+                <span>UI / UX <br>Design</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="318">0</strong>
+              </div>
+              <div class="text-2">
+                <span>SKILLED<br>EXPERTS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{!-- section 04 --}}
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+      <div class="container-fluid px-md-0">
+        <div class="row no-gutters">
+          <div class="col-md-4 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(images/project/pr-01.jpg);">
+              <a href="images/project/pr-01.jpg"
+                class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Team Building CVL 2018</span>
+                  <h2><a href="#">DESIGN AGENCY</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(images/project/pr-08.jpeg);">
+              <a href="images/project/pr-08.jpeg"
+                class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Lak project</span>
+                  <h2><a href="#">WEB DESIGN</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(images/project/pr-03.jpg);">
+              <a href="images/project/pr-03.jpg"
+                class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Tu van tuyen sinh CVL 2019</span>
+                  <h2><a href="#">DESIGN AGENCY</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(images/project/pr-04.jpg);">
+              <a href="images/project/pr-04.jpg"
+                class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Team Building CVL 2019</span>
+                  <h2><a href="#">DESIGN AGENCY</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(images/project/pr-07.jpeg);">
+              <a href="images/project/pr-07.jpeg"
+                class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Wao Studio Project</span>
+                  <h2><a href="#">WEB DESIGN</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="work img d-flex align-items-end" style="background-image: url(images/project/pr-05.jpg);">
+              <a href="images/project/pr-05.jpg"
+                class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Team Building CVL 2019</span>
+                  <h2><a href="#">DESIGN AGENCY</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   {{>footer}}
 </body>

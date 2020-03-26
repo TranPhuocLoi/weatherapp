@@ -35,9 +35,9 @@ app.get("/home", (req, res) => {
     name: "nudo350"
   });
 });
-app.get("/help", (req, res) => {
+app.get("/projects", (req, res) => {
   // res.sendFile(publicDirectory + "/help.html");
-  res.render("help", {
+  res.render("projects", {
     title: "Help Page",
     helpText: "Can I help you????",
     name: "nudo350"
@@ -47,6 +47,14 @@ app.get("/help", (req, res) => {
 app.get("/about", (req, res) => {
   // res.sendFile(publicDirectory + "/about.html");
   res.render("about", {
+    title: "About Page",
+    name: "nudo350"
+  });
+});
+
+app.get("/contact", (req, res) => {
+  // res.sendFile(publicDirectory + "/about.html");
+  res.render("contact", {
     title: "About Page",
     name: "nudo350"
   });
