@@ -2518,3 +2518,22 @@ $color5: #2092a9;
     transform: translateX(0px);
   }
 }
+.set-pt {
+  padding-top: 30px;
+}
+@media only screen and (max-width: 450px) {
+  .wrapper-logo {
+    text-align: center;
+    a {
+      margin: 0px auto;
+      margin-bottom: 5px;
+    }
+  }
+  .wrapper-social {
+    justify-content: center !important;
+  }
+  .set-pt {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
