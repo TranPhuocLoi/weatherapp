@@ -79,7 +79,10 @@ app.get("/result", (req, res) => {
     };
     console.log(data);
 
-    res.render("result", { data, place_name });
+    res.render("result", {
+      data,
+      place_name
+    });
   });
 });
 
