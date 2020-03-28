@@ -89,3 +89,16 @@
 //       para_2.textContent = "ERROR!";
 //     });
 // });
+
+// form.addEventListener("submit", function(event) {
+//   event.preventDefault();
+
+// });
+validateForm = () => {
+  var valueInput = document.forms["weather_input"]["search"].value;
+  if (valueInput.trim() === "" || valueInput.length === 0) {
+    alert("Please type your location!");
+    document.forms["weather_input"]["search"].value = "";
+    return false;
+  }
+};
