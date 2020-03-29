@@ -10162,7 +10162,7 @@ h5,
 }
 
 .bg-secondary {
-  background: #ffcf07 !important;
+  background: #272a32 !important;
 }
 
 .bg-primary {
@@ -11247,7 +11247,7 @@ textarea.form-control {
   color: #ffcf07;
 }
 .blog-entry .text .meta-chat {
-  color: #6c757d;
+  color: #272a32;
 }
 .blog-entry .text .read {
   color: #000000;
@@ -11261,7 +11261,7 @@ textarea.form-control {
 }
 .blog-entry .meta > div a {
   font-size: 14px;
-  color: #6c757d;
+  color: #272a32;
   font-weight: 500;
 }
 .blog-entry .meta > div a:hover {

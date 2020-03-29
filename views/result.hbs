@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/png" href="/images/logoweather.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
     rel="stylesheet">
@@ -30,29 +30,54 @@
   {{!-- partials --}}
   {{>header}}
   <main>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="weather-wrapper">
-            <div class="weather-card madrid" style="background-image:url('/images/weatherbg/{{data.icon}}.jpg')">
-              <div class="weather-icon">
-                <img class="icon-style" src="/icon_weather/{{data.icon}}.svg">
-              </div>
-              <h1>{{data.temperature}}º</h1>
-              <div class="weather-detail">
-                <p>{{place_name}}</p>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="weather-wrapper">
+              <div class="weather-card madrid" style="background-image:url('/images/weatherbg/{{data.icon}}.jpg')">
+                <div class="weather-icon">
+                  <img class="icon-style" src="/icon_weather/{{data.icon}}.svg">
+                </div>
+                <h1>{{data.temperature}}º</h1>
+                <div class="weather-detail">
+                  <p>{{place_name}}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="weather-btn">
-            <a href="/weather">More Locations</a>
+            <div class="weather-btn">
+              <a href="/weather">More Locations</a>
+            </div>
+            <div class="weather-btn">
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="ftco-section testimony-section bg-primary">
+      <div class="container-fluid">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <span class="subheading">VIEW MORE DEATAIL WEATHER THIS LOCATION</span>
+            <h2 class="mb-4">{{place_name}}</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              {{#each data.hourly_data}}
+              {{>list_hourly_result}}
+              {{log this}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   {{>footer}}
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  {{!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -60,7 +85,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> --}}
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -76,6 +101,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 

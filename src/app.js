@@ -13,6 +13,33 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 //set up view engine for express
 hbs.registerPartials(partialsDirectory);
+hbs.registerHelper("calculatorTime", function(time) {
+  var a = new Date(time * 1000);
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var fulltime =
+    date + " " + month + " " + year + " " + hour + ":" + min + ":" + sec;
+  return fulltime;
+});
+
 app.set("views", path.join(__dirname, "../views")); // set up directory for view folder
 //set up view engine for express
 app.set("view engine", "hbs");
@@ -77,6 +104,7 @@ app.get("/result", (req, res) => {
     const data = {
       ...dataForecast
     };
+    console.log("--------------------data result-----------------------");
     console.log(data);
 
     res.render("result", {
@@ -100,6 +128,9 @@ app.get("/api/weather", (req, res) => {
     if (err) {
       return res.send(err);
     }
+    // const place = data.features[0].place_name;
+    // const lat = data.features[0].geometry.coordinates[1];
+    // const lng = data.features[0].geometry.coordinates[1];
     const place = data.features[0].place_name;
     const lat = data.features[0].geometry.coordinates[1];
     const lng = data.features[0].geometry.coordinates[1];

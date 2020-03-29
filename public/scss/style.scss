@@ -6,7 +6,7 @@ $font-primary: "Poppins", Arial, sans-serif;
 $white: #fff;
 $black: #000000;
 $darken: #272a32;
-
+$secondary: #272a32;
 $primary: #ffcf07;
 
 @mixin border-radius($radius) {
@@ -672,7 +672,7 @@ h5,
   background: #f8f9fd !important;
 }
 .bg-secondary {
-  background: $primary !important;
+  background: $secondary !important;
 }
 
 .bg-primary {
