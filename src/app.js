@@ -87,11 +87,29 @@ app.get("/contact", (req, res) => {
   });
 });
 
-app.get("/weather", (req, res) => {
+app.get("/weather", urlencodedParser, (req, res) => {
   // res.sendFile(publicDirectory + "/about.html");
-  res.render("weather", {
-    title: "Weather Page",
-    name: "nudo350"
+  // res.render("weather", {
+  //   title: "Weather Page",
+  //   name: "nudo350"
+  // });
+  const { search } = req.body;
+  geocoding(search, function(err, data) {
+    if (err) {
+      return res.send(err);
+    }
+    console.log(data.features);
+    const newData = data.features.map(feature => {
+      return {
+        place_name: feature.place_name,
+        lat: feature.geometry.coordinates[1],
+        lng: feature.geometry.coordinates[0]
+      };
+    });
+    console.log(newData);
+    res.render("weather", {
+      dataAutocomplete: newData
+    });
   });
 });
 
@@ -104,9 +122,8 @@ app.get("/result", (req, res) => {
     const data = {
       ...dataForecast
     };
-    console.log("--------------------data result-----------------------");
-    console.log(data);
-
+    // console.log("--------------------data result-----------------------");
+    // console.log(data);
     res.render("result", {
       data,
       place_name
@@ -162,7 +179,7 @@ app.post("/autocomplete", urlencodedParser, (req, res) => {
         lng: feature.geometry.coordinates[0]
       };
     });
-    console.log(newData);
+    // console.log(newData);
     res.render("autocomplete", {
       dataAutocomplete: newData
     });

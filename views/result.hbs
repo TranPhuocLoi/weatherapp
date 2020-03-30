@@ -30,37 +30,113 @@
   {{!-- partials --}}
   {{>header}}
   <main>
-    <section class="ftco-section">
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="weather-wrapper">
-              <div class="weather-card madrid" style="background-image:url('/images/weatherbg/{{data.icon}}.jpg')">
-                <div class="weather-icon">
-                  <img class="icon-style" src="/icon_weather/{{data.icon}}.svg">
+        <div class="row d-flex no-gutters">
+          <div class="col-md-6 d-flex">
+            <div class="container-fluid">
+              <div class="row justify-content-center pt-5">
+                <div class="col-md-7 text-center heading-section heading-section-dark ftco-animate">
+                  <span class="subheading">{{calculatorTime data.currently_data.time}}</span>
                 </div>
-                <h1>{{data.temperature}}º</h1>
-                <div class="weather-detail">
-                  <p>{{place_name}}</p>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="weather-wrapper">
+                    <div class="weather-card madrid"
+                      style="background-image:url('/images/weatherbg/{{data.icon}}.jpg')">
+                      <div class="weather-icon">
+                        <img class="icon-style" src="/icon_weather/{{data.icon}}.svg">
+                      </div>
+                      <h1>{{data.temperature}}º</h1>
+                      <div class="weather-detail">
+                        <p>{{place_name}}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="weather-btn">
-              <a href="/weather">More Locations</a>
-            </div>
-            <div class="weather-btn">
-
+          </div>
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="row justify-content-start py-5">
+              <div class="col-md-12 heading-section ftco-animate">
+                <div class="heading-section ftco-animate ">
+                  <h2 class="mb-4">Find other weather results</h2>
+                </div>
+                <div class="weather-search  ftco-animate">
+                  <form name="weather_input" action="/autocomplete" method="POST" onsubmit="return validateForm()">
+                    <div class="input-group mb-3">
+                      <input id="search" type="text" class="form-control" placeholder="Type your location..."
+                        name="search">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" name="submit" value="Submit">Search</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="ftco-section testimony-section bg-primary">
+    <section class="ftco-counter" id="section-counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number"
+                  data-number="{{data.currently_data.dewPoint}}">{{data.currently_data.dewPoint}}</strong>
+              </div>
+              <div class="text-2">
+                <span>Data <br>Dew Point</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number"
+                  data-number="{{data.currently_data.pressure}}">{{data.currently_data.pressure}}</strong>
+              </div>
+              <div class="text-2">
+                <span>Data <br>Pressure</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number"
+                  data-number="{{data.currently_data.windSpeed}}">{{data.currently_data.windSpeed}}</strong>
+              </div>
+              <div class="text-2">
+                <span>Data <br>Wind Speed</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number"
+                  data-number="{{data.currently_data.windBearing}}">{{data.currently_data.windBearing}}</strong>
+              </div>
+              <div class="text-2">
+                <span>Data <br>wind Bearing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ftco-section testimony-section bg-secondary">
       <div class="container-fluid">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <div class="col-md-7 text-center heading-section heading-section-dark ftco-animate">
             <span class="subheading">VIEW MORE DEATAIL WEATHER THIS LOCATION</span>
-            <h2 class="mb-4">{{place_name}}</h2>
+            <h2 class="mb-4" style="color:#fff">{{place_name}}</h2>
           </div>
         </div>
         <div class="row ftco-animate">

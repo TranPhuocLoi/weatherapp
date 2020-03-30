@@ -76,13 +76,46 @@
       ],
       responsive: {
         0: {
-          items: 3
+          items: 2,
+          dots: false
         },
         600: {
-          items: 6
+          items: 6,
+          dots: true
         },
         1000: {
           items: 8
+        }
+      }
+    });
+
+    $(".carousel-right").owlCarousel({
+      loop: true,
+      items: 6,
+      margin: 10,
+      nav: false,
+      dots: true,
+      stagePadding: 0,
+      startPosition: 0,
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
+      autoplay: true,
+      navText: [
+        '<span class="ion-ios-arrow-back">',
+        '<span class="ion-ios-arrow-forward">'
+      ],
+      responsive: {
+        0: {
+          items: 2,
+          dots: false
+        },
+        600: {
+          items: 3,
+          dots: false
+        },
+        1000: {
+          items: 3,
+          dots: false
         }
       }
     });

@@ -22,7 +22,7 @@
 <body>
   {{>header}}
   <main>
-    <section class="ftco-section">
+    {{!-- <section class="ftco-section">
       <div class="container">
         <div class="row d-flex no-gutters">
           <div class="col-md-6 pl-md-5">
@@ -63,7 +63,41 @@
           </div>
         </div>
       </div>
+    </section> --}}
+    <section class="ftco-section  ftco-no-pt ftco-no-pb">
+      <div class="container">
+        <div class="row d-flex no-gutters">
+          <div class="col-md-12">
+            <div class="row justify-content-start py-5">
+              <div class="col-md-12 heading-section ftco-animate pr-md-5 py-md-4">
+                <span class="subheading">Welcome to WeatherApp</span>
+                <div class="heading-section ftco-animate ">
+                  <h2 class="mb-4">Accurate Weather Forecast & Weather Radar MapWeather</h2>
+                  <p style="text-align: justify;">This weather app is one of best free weather apps with full features:
+                    Local
+                    weather, weather map (weather map service)
+                    and weather widgets.
+                  </p>
+                </div>
+                <div class="weather-search  ftco-animate">
+                  <form name="weather_input" action="/autocomplete" method="POST" onsubmit="return validateForm()">
+                    <div class="input-group mb-3">
+                      <input id="search" type="text" class="form-control" placeholder="Type your location..."
+                        name="search">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" name="submit" value="Submit">Search</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
   </main>
   {{>footer}}
 </body>

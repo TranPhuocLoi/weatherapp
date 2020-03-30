@@ -15,6 +15,7 @@ function forecast(lat, lng, callback) {
       summary: data.currently.summary,
       icon: data.currently.icon,
       temperature: data.currently.temperature,
+      currently_data: data.currently,
       hourly_data: data.hourly.data
     });
   });
